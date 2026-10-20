@@ -1,5 +1,9 @@
 # MAR Creative Academy 2026: motion production system
 
+> **Current direction (2026-10-20):** [`kinetic-system/`](kinetic-system/), the MAR Kinetic System.
+> Arial Narrow, white only, on black; text motion rules from the OpenAI reference only.
+> It supersedes `STYLE.md` and the Remotion templates below for new work.
+
 This repo generates on-brand motion graphics and stills for the MAR Creative
 Academy (MAR, Museo d'Arte della città di Ravenna). Everything is code, built
 with [Remotion](https://remotion.dev) (React → MP4). The visual rules are in
