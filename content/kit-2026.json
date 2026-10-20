@@ -1,0 +1,16 @@
+{
+  "_note": "Launch kit for the 2026 edition. `npm run kit` renders every job below.",
+  "jobs": [
+    { "template": "Boot", "formats": ["story", "post", "wide"], "seed": 1 },
+    { "template": "OpenCall", "formats": ["story", "post"], "seed": 1 },
+    { "template": "Mosaic", "formats": ["story", "post"], "seed": 1 },
+    { "template": "Signal", "formats": ["story"], "seed": 1 },
+    { "template": "Terrain", "formats": ["post", "square"], "seed": 1 },
+    { "template": "Workshop", "format": "story", "seed": 1, "workshop": 0 },
+    { "template": "Workshop", "format": "story", "seed": 2, "workshop": 1 },
+    { "template": "Workshop", "format": "story", "seed": 3, "workshop": 2 },
+    { "template": "Workshop", "format": "story", "seed": 4, "workshop": 3 },
+    { "template": "Generative", "formats": ["story"], "seeds": [1, 2, 3, 4, 5, 6] },
+    { "template": "Boot", "formats": ["post"], "seed": 1, "still": true }
+  ]
+}
