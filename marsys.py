@@ -227,16 +227,23 @@ class Lockup(Scene):
         fr = self.fr; lines = self.c["title"].split()
         sizes = [fit(x, fr.measure, True) for x in lines]
         block = sum(capH(S, True) for S in sizes) + 1.6 * fr.U * (len(lines) - 1)
-        y = (fr.h - fr.M - 14 * fr.U - block) if self.bottom else fr.M + 22 * fr.U
+        # Short titles in short formats: shrink the stack uniformly so it never collides with the index.
+        n = len(self.c["words"]); pitch = capH(fr.TEXT) + 2.4 * fr.U
+        top = fr.M + 22 * fr.U
+        if self.bottom: room = (fr.h - fr.M - 14 * fr.U) - (top + (n + 1) * pitch + 6 * fr.U)
+        else: room = (fr.h - fr.M - 10 * fr.U - (n - 1) * pitch - capH(fr.TEXT)) - 14 * fr.U - top
+        if block > room:
+            k = room / block; sizes = [S * k for S in sizes]
+            block = sum(capH(S, True) for S in sizes) + 1.6 * fr.U * (len(lines) - 1)
+        y = (fr.h - fr.M - 14 * fr.U - block) if self.bottom else top
         first = None
         for k, s in enumerate(lines):
-            S = fit(s, fr.measure, True); y += capH(S, True) + (0 if k == 0 else 1.6 * fr.U)
+            S = sizes[k]; y += capH(S, True) + (0 if k == 0 else 1.6 * fr.U)
             text(d, s, S, fr.M, y, True)
             if k == 0: first = (s, S, y)
         y += 8 * fr.U
         if self.bottom: y = fr.M + 22 * fr.U + (len(self.c["words"]) + 1) * (capH(fr.TEXT) + 2.4 * fr.U)
         d.rectangle([int(fr.M), int(y), int(fr.w - fr.M), int(y + fr.HAIR)], fill=INK)
-        n = len(self.c["words"]); pitch = capH(fr.TEXT) + 2.4 * fr.U
         for i, w_ in enumerate(self.c["words"]):
             yy = (fr.M + 22 * fr.U + (i + 1) * pitch) if self.bottom else fr.h - fr.M - 10 * fr.U - (n - 1 - i) * pitch
             text(d, shown(f"{i + 1:02d} {w_}", self.sched[i], f), fr.TEXT, fr.M + i * fr.col, yy, False)

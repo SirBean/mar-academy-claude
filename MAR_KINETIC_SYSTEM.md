@@ -145,6 +145,7 @@ All timings at 30 fps. Easing: **none**. Things appear, get typed, or get cut.
 - Hairline divider under the title.
 - Index list (`01 WORD`) in TEXT, stair-indented, typed in the first 50% of the scene.
 - Last **12 f**: selection frame on line 1 (padded 1.5U).
+- **Height fit:** if the fit-to-measure stack is taller than the room left by the index, the whole stack is scaled down by one common factor until it fits. Room: variant A, from the top content line to **14U** above the first index line (8U divider + 6U clear). Variant B, from **6U** below the divider to the bottom anchor. Lines keep their relative sizes and stay flush left; only here may a display line be narrower than the measure. Happens with short titles in short formats (e.g. `MAR OPEN CALL` at 4:5).
 
 ### 4.2 Monument
 - One keyword at DISPLAY (centered vertically) or CROP (bleeding right, at 62% height). 50/50 by seed.
@@ -209,7 +210,8 @@ Render: Pillow at 2x supersampling, piped to ffmpeg (H.264, yuv420p, CRF 14).
 - [ ] Only Arial Narrow (or the metric fallback). Only Regular and Bold.
 - [ ] Every pixel of type is `#FFFFFF`. Ground is `#000000`. No other values.
 - [ ] No type ever sits on white.
-- [ ] Every display line's ink width equals the measure (or 1.4x for CROP).
+- [ ] Every display line's ink width equals the measure (or 1.4x for CROP), except a Lockup stack shrunk by the height fit (4.1).
+- [ ] Lockup title never overlaps the index or the divider.
 - [ ] Everything starts on the left margin or on a column line.
 - [ ] No easing, fades, slides or scaling. Only typing, cuts, and on/off.
 - [ ] Typed characters never move.
