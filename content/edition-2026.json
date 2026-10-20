@@ -11,6 +11,7 @@
   "pillars": ["Innovation", "Technology", "Design"],
   "cta": ["Iscriviti", "gratuitamente"],
   "statement": ["OPEN", "CALL", "STARTS", "NOW"],
+  "dialogue": [["ART", "CODE"], ["CODE", "ART"], ["HAND", "MACHINE"]],
   "deadline": "TBD",
   "workshops": [
     { "id": "community", "title": "Community", "speaker": "TBD", "date": "TBD", "accent": "green" },

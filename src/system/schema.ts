@@ -24,6 +24,8 @@ export const editionSchema = z.object({
   pillars: z.array(z.string()),
   cta: z.array(z.string()),
   statement: z.array(z.string()),
+  /** Identity film: pairs re-dealt as stretch type, one per beat. */
+  dialogue: z.array(z.array(z.string())),
   deadline: z.string(),
   workshops: z.array(workshopSchema),
 });

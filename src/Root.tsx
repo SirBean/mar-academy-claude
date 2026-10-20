@@ -10,12 +10,14 @@ import { Terrain, TERRAIN_FRAMES } from "./templates/Terrain";
 import { Signal, SIGNAL_FRAMES } from "./templates/Signal";
 import { Workshop, WORKSHOP_FRAMES } from "./templates/Workshop";
 import { Generative, GENERATIVE_FRAMES } from "./templates/Generative";
+import { Identity, IDENTITY_FRAMES } from "./templates/Identity";
 
 /**
  * Template registry. Composition ids are `<Template>-<format>`,
  * e.g. `Boot-story`, `Generative-wide`. The render CLI relies on this.
  */
 export const TEMPLATES = {
+  Identity: { component: Identity, frames: IDENTITY_FRAMES, still: 350 },
   Boot: { component: Boot, frames: BOOT_FRAMES, still: 230 },
   Mosaic: { component: Mosaic, frames: MOSAIC_FRAMES, still: 90 },
   OpenCall: { component: OpenCall, frames: OPENCALL_FRAMES, still: 40 },

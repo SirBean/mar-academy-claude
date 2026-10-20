@@ -16,10 +16,10 @@ import { bundle } from "@remotion/bundler";
 import { renderMedia, renderStill, selectComposition } from "@remotion/renderer";
 import editionJson from "../content/edition-2026.json";
 
-const TEMPLATES = ["Boot", "Mosaic", "OpenCall", "Terrain", "Signal", "Workshop", "Generative"];
+const TEMPLATES = ["Identity", "Boot", "Mosaic", "OpenCall", "Terrain", "Signal", "Workshop", "Generative"];
 const FORMATS = ["story", "post", "square", "wide"];
 const STILL_FRAME: Record<string, number> = {
-  Boot: 230, Mosaic: 90, OpenCall: 40, Terrain: 110, Signal: 100, Workshop: 120, Generative: 100,
+  Identity: 350, Boot: 230, Mosaic: 90, OpenCall: 40, Terrain: 110, Signal: 100, Workshop: 120, Generative: 100,
 };
 
 type Job = {

@@ -23,6 +23,14 @@ graphic, not the rule.
 
 ---
 
+## 1b. The mark
+
+- **The mark is `MAR` split by one vertical seam** (`modules/SeamMark.tsx`). Left of the seam is machine (tesserae on the cell grid, compilable to 0/1 glyphs). Right of the seam is hand (one hatched hairline gesture that boils on fours).
+- **At rest the seam sits at x=0.50.** The mark is never fully hand or fully machine in a lockup. Moving the seam is the only way the mark animates.
+- The seam is a `dim` hairline and always snaps to a cell boundary.
+
+---
+
 ## 2. Colour
 
 - **Two grounds only.** `night` #000000 (A–D) and `paper` #CDCDCD (E). There are no gradients and no tints.

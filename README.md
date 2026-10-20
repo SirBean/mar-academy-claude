@@ -53,6 +53,7 @@ Files go to `out/` with reproducible names (`Boot-story-s1.mp4`).
 
 | Template | Ref | Length | What it does |
 |----------|-----|--------|--------------|
+| `Identity` | all | 12 s | **Hero film.** Hand × machine: the mark is hatched by hand, sampled into tesserae by a moving seam, compiled to 0/1, argued in stretch type, then locks up split at x=0.50 |
 | `Boot` | A | 8 s | Identity written as code, `academy.boot()`, staircase intro, bracket title end card |
 | `OpenCall` | B | 8 s | Statement words stretched to fill the frame, re-dealt on every beat, info card |
 | `Signal` | C | 5 s | Letterform made of 0/1 glyphs with RGB split, camera push |
